@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Does Part-Time Work Help Graduates Land High-Paid Jobs? | PLS 210 Presentation #1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2420; --sub:#5b6156; --bg:#eee6d3; --card:#fbf8ef; --line:#d9cdad;
+    --gold:#a8782c; --forest:#2e4a3f; --forest-deep:#1d332a; --head:#1d332a; --subhead:#2e4a3f;
+    box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){--ink:#ece6d2;--sub:#a9a58f;--bg:#141b17;--card:#1c2621;--line:#33423a;--gold:#d19a46;--forest:#3c5e50;--forest-deep:#0f1a15;--head:#ece6d2;--subhead:#cdbf8f;}
+  }
+  :root[data-theme="dark"]{--ink:#ece6d2;--sub:#a9a58f;--bg:#141b17;--card:#1c2621;--line:#33423a;--gold:#d19a46;--forest:#3c5e50;--forest-deep:#0f1a15;--head:#ece6d2;--subhead:#cdbf8f;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px);}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;line-height:1.65;font-size:16px;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
+
+  .hero{background:linear-gradient(180deg,#1d332a,#2e4a3f);color:#f3ecd8;padding:70px 0 58px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(168,120,44,0.35),transparent 70%);}
+  .hero .wrap{position:relative;z-index:1;}
+  .hero .kicker{font-size:0.82rem;letter-spacing:0.04em;color:#c99440;margin:0 0 14px;}
+  .hero h1{font-size:clamp(2rem,4.6vw,2.9rem);margin:0 0 16px;max-width:680px;color:#fdfaf0;}
+  .hero .dek{max-width:540px;font-size:1.05rem;color:#d8d1b9;margin:0 0 22px;}
+  .hero .byline{color:#b7ad8f;font-size:0.9rem;}
+
+  nav{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:10;}
+  nav .wrap{display:flex;gap:22px;flex-wrap:wrap;padding:12px 28px;font-size:0.82rem;}
+  nav a{color:var(--subhead);text-decoration:none;font-weight:600;}
+  nav a:hover{color:var(--gold);}
+
+  main{padding-bottom:70px;}
+  section{padding:46px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .num{display:inline-block;font-family:'Fraunces',serif;font-style:italic;color:var(--gold);font-size:1rem;margin-right:8px;}
+  h2{font-size:1.55rem;color:var(--head);margin:0 0 18px;}
+  h3{font-size:1.05rem;color:var(--subhead);margin:24px 0 8px;}
+
+  .rq-card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:2px;padding:20px 24px;font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;color:var(--head);}
+  .meta{margin-top:14px;font-size:0.92rem;color:var(--sub);}
+  .meta b{color:var(--ink);}
+  .callout{background:var(--forest);color:#f0ead5;border-radius:2px;padding:18px 22px;margin:18px 0;font-size:0.95rem;}
+  .callout b{color:#e0b062;}
+  .tag{display:inline-block;background:var(--forest);color:#f0ead5;font-size:0.72rem;letter-spacing:0.03em;padding:4px 12px;border-radius:2px;margin-bottom:12px;}
+
+  .source{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:16px 20px;margin:14px 0;}
+  .source b{color:var(--head);}
+  .source .crit{display:block;margin-top:8px;font-size:0.87rem;color:var(--sub);font-style:italic;border-top:1px dashed var(--line);padding-top:8px;}
+
+  .mech{margin:20px 0 6px;}
+  .mech svg{width:100%;max-width:640px;height:auto;display:block;margin:0 auto;}
+  .hyp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;}
+  @media(max-width:640px){.hyp-grid{grid-template-columns:1fr;}}
+  .hyp{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--forest);padding:16px 18px;border-radius:2px;}
+  .hyp.alt{border-top-color:var(--gold);}
+  .hyp h3{margin-top:0;}
+  .table-scroll{overflow-x:auto;}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:0.9rem;background:var(--card);}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--forest);color:#f0ead5;font-weight:600;}
+  .note{font-size:0.88rem;color:var(--sub);font-style:italic;}
+  footer{background:var(--forest-deep);color:#b7ad8f;padding:26px 0;font-size:0.85rem;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="kicker">PLS 210 — Research Design, Part 1</p>
+    <h1>Does Part-Time Work Help Graduates Land High-Paid Jobs? Skills or Networks?</h1>
+    <p class="dek">A positivist inquiry into whether working while studying raises Kazakhstani graduates' chances of a high-paid first job, and which mechanism explains it.</p>
+    <p class="byline">ozindi_ayama · Presentation #1</p>
+  </div>
+</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#rq">Question</a>
+    <a href="#position">Positioning</a>
+    <a href="#contribution">Contribution</a>
+    <a href="#litreview">Literature</a>
+    <a href="#theory">Theory</a>
+    <a href="#ai">AI Transparency</a>
+    <a href="#reflection">Reflection</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="rq">
+  <h2><span class="num">01</span>Research Question</h2>
+  <div class="rq-card">Does part-time work during studies increase Kazakhstani university graduates' chances of getting a high-paid first job, and is this because of skills gained or because of networks made at work?</div>
+  <p class="meta"><b>Population:</b> university graduates in Kazakhstan. <b>Time frame:</b> part-time work during studies; first job within 12 months of graduation. <b>Part-time work:</b> any paid work held alongside full-time study (measured as yes/no, weekly hours, and whether the job relates to the student's field). <b>"High-paid":</b> a starting monthly salary above the median among survey respondents, reported in salary brackets.</p>
+</section>
+
+<section id="position">
+  <h2><span class="num">02</span>Epistemological Positioning</h2>
+  <span class="tag">Positivist</span>
+  <p>This project treats pay and job-finding as observable and measurable. It looks for a general, probabilistic pattern across many graduates, not one graduate's interpretation of their own path. I propose two competing, falsifiable hypotheses about the mechanism linking a cause (part-time work) to an outcome (a high-paid first job), in the spirit of King, Keohane &amp; Verba's (1994) definition of theory as a reasoned, testable answer to a research question. A positivist stance fits because the question asks <i>whether</i> and <i>why</i> an effect holds on average, which a survey with a clear IV, DV and mechanism measures can test.</p>
+  <div class="callout"><b>Positionality.</b> I have worked in sales for over two years alongside my studies. That experience made me suspicious of the story that part-time work always pays off, and I may be inclined to expect it does, either through skills or through contacts. I design the study to test both mechanisms against each other, and I will report results even if they contradict that expectation.</div>
+</section>
+
+<section id="contribution">
+  <h2><span class="num">03</span>Contribution</h2>
+  <p>Research on student employment is dominated by US, Australian and Chinese samples, and it mostly measures grades or employment rates. Almost none of it examines Kazakhstan, where informal hiring channels, a post-Soviet university-to-labor-market pipeline and uneven pay across cities and fields may change what work experience is worth. This project contributes by testing <b>two competing mechanisms against each other</b>, skills versus networks, instead of assuming that work helps for one reason, and by using starting pay as a concrete, comparable outcome.</p>
+</section>
+
+<section id="litreview">
+  <h2><span class="num">04</span>Literature Review</h2>
+  <p>The literature splits into work that stresses skills and signals, work that stresses social ties, and regional evidence that grounds the question in Kazakhstan and the post-Soviet context.</p>
+
+  <h3>Skills and signals (supports H1)</h3>
+  <div class="source">
+    <b>Becker (1964)</b>, <i>Human Capital: A Theoretical and Empirical Analysis</i> — the foundational argument that skills acquired through training and experience raise productivity and, therefore, pay.
+    <span class="crit">Critical note: assumes employers can observe skills, so I need a measure of skills actually gained at work, not just of having worked.</span>
+  </div>
+  <div class="source">
+    <b>Van Belle et al. (2020)</b>, <i>Economics of Education Review</i> — a vignette experiment with 242 employers found student work signals better work attitude, stronger networks and greater maturity, and raises interview and hiring odds, but only field-relevant work signals real trainability.
+    <span class="crit">Critical note: "any work" and "field-relevant work" may behave very differently, so field relevance must be in my measurement. It also mentions networks, which blurs the line between H1 and H2.</span>
+  </div>
+  <div class="source">
+    <b>Jackson (2023)</b>, <i>Journal of Further and Higher Education</i> — national survey of 150,000+ Australian graduates; in-curricular work experience produced clear labor-market gains regardless of the type of outside job held.
+    <span class="crit">Critical note: the university's role in organizing work experience may matter as much as the job itself, which I will note as an alternative explanation.</span>
+  </div>
+
+  <h3>Social ties and networks (supports H2)</h3>
+  <div class="source">
+    <b>Granovetter (1973)</b>, "The Strength of Weak Ties," <i>American Journal of Sociology</i> — people often find jobs through acquaintances and contacts rather than formal applications, because weak ties bring access to new information and opportunities.
+    <span class="crit">Critical note: written for a US labor market; I cannot assume that referral hiring works the same way in Kazakhstan, which is why I measure how each graduate found their job.</span>
+  </div>
+
+  <h3>Testing both mechanisms together</h3>
+  <div class="source">
+    <b>Fei, Ghazali &amp; Tham (2025)</b>, <i>Edelweiss Applied Science and Technology</i> — surveyed 750 students in Shanxi, China; human capital (academic performance, skills, work experience) predicted employment outcomes, partially mediated by perceived employability.
+    <span class="crit">Critical note: closest existing model to mine, but it treats skills and experience as complementary inputs rather than competing pathways, and does not test networks. That is the gap here.</span>
+  </div>
+
+  <h3>Kazakhstani and post-Soviet context</h3>
+  <div class="source">
+    <b>HeadHunter Kazakhstan research service survey (2013, via Zakon.kz)</b> — of ~4,000 respondents, 67% combined work and study during university; 53% said they managed both successfully, only 3% said both suffered.
+    <span class="crit">Critical note: self-reported and over a decade old. Useful for the scale of the phenomenon, not as causal evidence. I will look for a newer, more rigorous Kazakhstan dataset before Part 2.</span>
+  </div>
+  <div class="source">
+    <b>Poplavskaya, Pashkov &amp; Kamaldinova (2026)</b>, <i>Monitoring of Public Opinion</i> (HSE) — panel study of 2,723 Russian undergraduates (2017–2024); where students worked (on- vs. off-campus) mattered more than employment type for academic outcomes, and effects were strongest in the earliest years of study.
+    <span class="crit">Critical note: it studies grades, not pay, so it is a regional comparator for how student work varies, and it supports measuring job location and year of study as controls.</span>
+  </div>
+  <div class="source">
+    <b>Youth pathways report, Kazakhstan (2026, Bluescreen.kz)</b> — 43.6% of surveyed young Kazakhstanis already work or combine study with work, reflecting a move away from the linear school→university→job path.
+    <span class="crit">Critical note: journalistic, not peer-reviewed. Cited only to show the phenomenon is current and widespread, not as evidence for either hypothesis.</span>
+  </div>
+</section>
+
+<section id="theory">
+  <h2><span class="num">05</span>Theory and Hypotheses</h2>
+  <p>Part-time work (IV) is expected to raise the chance of a high-paid first job (DV) through one of two causal paths. The paths are measured separately so they can be compared.</p>
+
+  <div class="mech">
+    <svg viewBox="0 0 640 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Part-time work leads to a high-paid first job through two paths: skills gained (H1) and networks made (H2).">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 z" fill="#a8782c"/></marker>
+      </defs>
+      <rect x="10" y="85" width="150" height="56" rx="2" fill="#fbf8ef" stroke="#2e4a3f" stroke-width="1.5"/>
+      <text x="85" y="118" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="13" fill="#1c2420">Part-time work (IV)</text>
+
+      <rect x="245" y="12" width="150" height="56" rx="2" fill="#fbf8ef" stroke="#2e4a3f" stroke-width="1.5"/>
+      <text x="320" y="36" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#1c2420">Skills gained</text>
+      <text x="320" y="53" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11" fill="#5b6156">H1 mediator</text>
+
+      <rect x="245" y="158" width="150" height="56" rx="2" fill="#fbf8ef" stroke="#a8782c" stroke-width="1.5"/>
+      <text x="320" y="182" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#1c2420">Networks made</text>
+      <text x="320" y="199" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11" fill="#5b6156">H2 mediator</text>
+
+      <rect x="480" y="85" width="150" height="56" rx="2" fill="#2e4a3f" stroke="#2e4a3f" stroke-width="1.5"/>
+      <text x="555" y="118" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#f0ead5">High-paid first job (DV)</text>
+
+      <line x1="160" y1="100" x2="245" y2="55" stroke="#a8782c" stroke-width="1.3" marker-end="url(#arrow)"/>
+      <line x1="395" y1="45" x2="480" y2="95" stroke="#a8782c" stroke-width="1.3" marker-end="url(#arrow)"/>
+      <line x1="160" y1="126" x2="245" y2="175" stroke="#a8782c" stroke-width="1.3" marker-end="url(#arrow)"/>
+      <line x1="395" y1="185" x2="480" y2="131" stroke="#a8782c" stroke-width="1.3" marker-end="url(#arrow)"/>
+    </svg>
+  </div>
+
+  <div class="hyp-grid">
+    <div class="hyp">
+      <h3>H1 — Skills mechanism</h3>
+      <p>Part-time work → practical, transferable skills (communication, teamwork, technical or sales skills) → employers reward those skills → higher chance of a high-paid first job, including for graduates hired through open applications. Consistent with Becker (1964); Van Belle et al. (2020); Jackson (2023).</p>
+    </div>
+    <div class="hyp alt">
+      <h3>H2 — Networks mechanism</h3>
+      <p>Part-time work → professional contacts and referrals → access to better openings → higher chance of a high-paid first job, mainly among graduates hired through referrals or contacts. Consistent with Granovetter (1973).</p>
+    </div>
+  </div>
+
+  <h3>How the two mechanisms are told apart</h3>
+  <div class="table-scroll">
+  <table>
+    <tr><th></th><th>Measure</th><th>If H1 is right</th><th>If H2 is right</th></tr>
+    <tr><td><b>Skills</b></td><td>Self-rated skills gained at work</td><td>Work predicts pay through skills, even among open-application hires</td><td>Skills add little once hiring route is accounted for</td></tr>
+    <tr><td><b>Networks</b></td><td>How the first job was found (referral or contact vs. open application)</td><td>Pay gap does not depend on referral</td><td>Pay gap appears mainly among referral hires linked to work contacts</td></tr>
+  </table>
+  </div>
+  <p class="note" style="margin-top:14px;"><b>Controls:</b> field of study, city (pay differs sharply between Almaty or Astana and regional towns), year of study, and field relevance of the job. Salary is collected in brackets to reduce non-response. I am not assuming either mechanism in advance; the goal is to find out which dominates.</p>
+</section>
+
+<section id="ai">
+  <h2><span class="num">06</span>AI Transparency Statement</h2>
+  <p>I used Claude as a thinking partner throughout: to explore and narrow research question options after my first design ran into problems, to work through the mediation logic behind H1 and H2, and to help locate and summarize sources. Claude proposed several candidate questions; I chose the topic, decided to remove GPA and the public-sector focus, and set the final wording ("high-paid," "overall"). The sources, critical notes and final text were checked and edited by me, and I verified each source independently, including Granovetter (1973) and the other citations, before presenting.</p>
+</section>
+
+<section id="reflection">
+  <h2><span class="num">07</span>What working with AI helped me understand — and what I still don't</h2>
+  <p class="note">This section is ungraded. It's here to show my thinking, not to be assessed.</p>
+  <p>AI helped me understand which data to use and how to operationalize my variables. I removed GPA because the common belief that work lowers grades turned out to be a stereotype that the data did not support, and the real articles AI helped me find showed a more mixed picture. That taught me to trust sources and data over assumptions.</p>
+  <p>AI is good at laying out options and comparisons, but the critique and the choices had to come from me. Most of my requests this week were for outputs, and the AI, not me, raised tensions like deduction versus induction. I learned more when I stepped back to ask what terms mean and how to ask better questions. What is still fuzzy is whether I can judge on my own that skills and networks can really be separated in my data.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Built for PLS 210 — Political Science Research Methods, Fall 2026.</div>
+</footer>
+
+</body>
+</html>
